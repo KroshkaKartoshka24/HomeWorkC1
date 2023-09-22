@@ -19,13 +19,37 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-System.Console.WriteLine("Введите трехзначное число: ");
-string num = System.Console.ReadLine();
-if (num.Length >= 3)
+// System.Console.WriteLine("Введите трехзначное число: ");
+// string num = System.Console.ReadLine();
+// if (num.Length >= 3)
+// {
+//     System.Console.WriteLine("Третья цифра введенного числа: " + num.Substring (2, 1));
+// }
+// else 
+// {
+//     System.Console.WriteLine("Третья цифра отсутствует");
+// }
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+System.Console.WriteLine("Введите цифру, соответствующую дню недели: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 0 && num < 8)
 {
-    System.Console.WriteLine("Третья цифра введенного числа: " + num.Substring (2, 1));
+    if (num < 6)
+    {
+        Console.WriteLine("Нет, это рабочий день");
+    }
+    else 
+    {
+        System.Console.WriteLine("Да, это выходной!");
+    }
 }
 else 
 {
-    System.Console.WriteLine("Третья цифра отсутствует");
+    System.Console.WriteLine($"{num}-го дня недели не существует!");
 }
